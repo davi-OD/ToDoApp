@@ -2,7 +2,6 @@ package com.davi.todoapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import com.davi.todoapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,12 +10,19 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val myList = binding.myList
-        val countryList = listOf("Uganda","Kenya","Tanzania","Rwanda",
-            "Burundi","DRC","UK","South Sudan","USA","Canada","India","South Africa","Brazil",
-            "Honduras","Mexico","Argentina","Colombia","Cuba","Venezuela")
-        val arrayAdapter = ArrayAdapter(this, R.layout.list_item_layout,R.id.country_id,countryList)
+//        val list = List<ChatModel>(10, {ChatModel()})
+        val list = ArrayList<ChatModel>()
+        list.add(ChatModel(R.drawable.ic_launcher_background, "David One", "Hello, how are you?", "Yesterday"))
+        list.add(ChatModel(R.drawable.ic_launcher_background, "David Two", "Hello, how are you?", "Yesterday"))
+        list.add(ChatModel(R.drawable.ic_launcher_background, "David Three", "Hello, how are you?", "Yesterday"))
+        list.add(ChatModel(R.drawable.ic_launcher_background, "David Four", "Hello, how are you?", "Yesterday"))
+        list.add(ChatModel(R.drawable.ic_launcher_background, "David Five", "Hello, how are you?", "Yesterday"))
+        list.add(ChatModel(R.drawable.ic_launcher_background, "David Six", "Hello, how are you?", "Yesterday"))
 
-        myList.adapter = arrayAdapter
+        val myAdapter = MyAdapter(this, list)
+        val listView = binding.myList
+        listView.adapter = myAdapter
+
+//        binding.myList.adapter = myAdapter
     }
 }
