@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ToDoApp</string>
+    <string name="Jogging">Jogging</string>
+    <string name="time">Yesterday</string>
+    <string name="task_list">sfsfddgdf\ndsfgdsd\nsfsgfgd\nsfregdg\nafsdddgfd\nsdffg\ndsfsfs\nsdfsf\nafsdf\n</string>
+    <string name="complete_as">Mark As Complete</string>
 
 </resources>
