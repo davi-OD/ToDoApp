@@ -24,6 +24,7 @@ class SplashActivity : AppCompatActivity() {
         scope.launch {
             delay(3500)
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            finish()
         }
 
     }
